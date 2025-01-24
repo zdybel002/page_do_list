@@ -1,0 +1,6 @@
+.mainBlock {
+  display: flex;
+}
+.hiddenBtm {
+  margin-bottom: 10px;
+}

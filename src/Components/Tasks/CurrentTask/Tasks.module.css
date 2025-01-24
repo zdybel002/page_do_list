@@ -1,0 +1,14 @@
+.taskLiItem {
+  width: 70%;
+  background-color: white;
+  display: flex;
+  margin-bottom: 7px;
+  padding: 10px;
+}
+
+.wyniki {
+  display: flex;
+}
+.kolumna_1 {
+  width: 45%;
+}
