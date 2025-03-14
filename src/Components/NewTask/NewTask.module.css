@@ -1,0 +1,32 @@
+.task_input{
+    width: 100%;
+    display: block;
+    border: 1px solid #a6aeae;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.input1{
+    padding-top: 8px;    
+    padding-bottom: 8px; 
+}
+
+.input2{
+    padding-top: 25px;    
+    padding-bottom: 25px; 
+}
+
+.btm{
+    width: 100%;
+    background-color: #6f81fd;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.new_task_heading{
+    margin-bottom: 10px;
+    color: #000;
+}

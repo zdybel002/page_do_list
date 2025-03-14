@@ -1,0 +1,24 @@
+.finish_list{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  }
+.taskLiItem {
+  width: 49%;
+  background-color: #0e1462;
+  display: flex;
+  margin-bottom: 7px;
+  padding: 10px;
+}
+/* .taskLiItem:not(:last-child) {
+  margin-right: 10px;
+} */
+  
+.wyniki {
+  display: flex;
+}
+.kolumna_1 {
+  width: 45%;
+}

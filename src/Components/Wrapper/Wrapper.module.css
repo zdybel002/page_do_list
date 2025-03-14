@@ -1,5 +1,15 @@
 .main_block {
-  padding: 20px;
-  /* background-color: rgb(22, 121, 121); */
+  width: 49%;
+  min-height: 20vh;
   margin-bottom: 10px;
+ 
+  background-color: #f0f1ff;
 }
+
+/* .taskLiItem {
+  width: 49%;
+  background-color: #f0f1ff;
+  display: flex;
+  margin-bottom: 7px;
+  padding: 10px;
+} */

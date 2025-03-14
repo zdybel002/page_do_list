@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+  }
+  .header_logo{
+    display: inline;
+    color: rgb(14, 13, 13);
+  }
+  .header_btm{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #5664f5;
+    border-radius: 10px;
+    border: none;
+  }
+  .header_img_logo{
+    width: 50px;
+  }
+  
+  .container_logo{
+    display: flex;
+    align-items: center;
+  }
