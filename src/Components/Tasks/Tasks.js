@@ -46,31 +46,41 @@ function Tasks() {
 
 
   // Przekaz zadanie do finish
-  const deleteTaskHandlerFromCurrent = (taskId, text) => {
-    console.log();
+  const deleteTaskHandlerFromCurrent = (taskId) => {
+    // Filter states with tasks
     setTasks((prevTasks) => {
       const updatedTasks = prevTasks.filter((task) => task.id !== taskId);
       return updatedTasks;
     });
+    
+    //Find task wich qiuals for selected to delete
+    const item_to_add = tasks.find(item => item.id === taskId);
+
+    // Add deleted task to oldTask
     setOldTasks((prewTasks) => {
       const updatedTasks = [...prewTasks];
-      updatedTasks.unshift({ description: text, id: Math.random().toString() });
+      updatedTasks.unshift(item_to_add);
       return updatedTasks;
     });
   };
 
-  //Przekaz zadania do Current
-  // const deleteTaskHandlerFromFinish = (taskId, text) => {
-  //   setOldTasks((prevTasks) => {
-  //     const updatedTasks = prevTasks.filter((task) => task.id !== taskId);
-  //     return updatedTasks;
-  //   });
-  //   setTasks((prewTasks) => {
-  //     const updatedTasks = [...prewTasks];
-  //     updatedTasks.unshift({ description: text, id: Math.random().toString() });
-  //     return updatedTasks;
-  //   });
-  // };
+
+  
+  // Take the task from bin
+  const deleteTaskHandlerFromFinish = (taskId, text) => {
+    setOldTasks((prevTasks) => {
+      const updatedTasks = prevTasks.filter((task) => task.id !== taskId);
+      return updatedTasks;
+    });
+
+    const item_to_retake = oldTasks.find(item => item.id === taskId);
+
+    setTasks((prewTasks) => {
+      const updatedTasks = [...prewTasks];
+      updatedTasks.unshift(item_to_retake);
+      return updatedTasks;
+    });
+  };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -107,6 +117,7 @@ function Tasks() {
         {isVisible && (
           <FinishTask
             tasks={oldTasks}
+            onDeleteTaskHandler = {deleteTaskHandlerFromFinish}
           ></FinishTask>
         )}
       </div>

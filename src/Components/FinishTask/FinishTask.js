@@ -12,13 +12,11 @@ function CurrentTask(props) {
 
   return (
     <React.Fragment>
- 
           <ul className={styles.finish_list}>
-         
           {props.tasks.map((task) => (
-          <Wrapper onClick={() => deleteHandler(task.id, task.text)}>
+          <Wrapper onClick={() => deleteHandler(task.id)} >
               <li key={task.id}>
-                <h4>{task.title}</h4>
+                  <h4 className={styles.taskItemText}>{task.title}</h4>
                   <p className={styles.taskItemText}>{task.description}</p>
               </li>
           </Wrapper>

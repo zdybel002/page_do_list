@@ -2,8 +2,11 @@
   width: 49%;
   min-height: 20vh;
   margin-bottom: 10px;
- 
+  border-radius: 7px;
   background-color: #f0f1ff;
+
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 /* .taskLiItem {
